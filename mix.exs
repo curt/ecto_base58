@@ -22,7 +22,7 @@ defmodule EctoBase58.MixProject do
   defp deps do
     [
       {:ecto, "~> 3.6"},
-      {:base_58_check, git: "https://github.com/curt/base58check.git", tag: "v1.1"}
+      {:base_58_check, git: "https://github.com/curt/base58check.git", ref: "d36bab06b05af0c65b7663e7f4d905b0e9cef526"}
     ]
   end
 end
