@@ -35,6 +35,16 @@ defmodule EctoBase58 do
 
   defp decode!(base58_id) do
     Base58Check.decode58!(base58_id)
+    |> maybe_pad_with_bytes()
+  end
+
+  defp maybe_pad_with_bytes(decoded) do
+    missing_bytes = 16 - byte_size(decoded)
+    if missing_bytes > 0 do
+      Enum.reduce(1..missing_bytes, decoded, fn _x, acc -> << 0 >> <> acc end)
+    else
+      decoded
+    end
   end
 
   defp encode(binary_id) do
