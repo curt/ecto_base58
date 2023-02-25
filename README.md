@@ -28,7 +28,7 @@ A few more tests would be nice.
 
 ## About
 
-The package author and maintainer is Curt Gilman.
+The package author and maintainer is [Curt Gilman](https://github.com/curt).
 It was extracted from another project that has yet to be released.
 
 It is licensed under the MIT License, for now at least.
